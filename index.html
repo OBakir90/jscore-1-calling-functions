@@ -11,12 +11,12 @@
 
 
 <body>
-    <div class="container">
+    <div class="container" id="maincontainer">
         <h3>GET YOUR BIRTH YEAR</h3>
         <div class="form">
-            <input type="number" id="input_age" value="" placeholder="Please enter your age">
-            <input type="text" id="input_name" value="" placeholder="Please enter your name">
-            <input type="submit" onclick="userData()"></input>
+            <input type="number" id="input_age" value="" autocomplete="off" placeholder="Please enter your age">
+            <input type="text" id="input_name" value="" autocomplete="off" placeholder="Please enter your name">
+            <input type="submit" onclick="getUserInfo()"></input>
         </div>
         <div class="show_result">
             <p id="result"></p>

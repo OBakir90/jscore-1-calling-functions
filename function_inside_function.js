@@ -4,26 +4,36 @@
 // function that takes someone 's name and age as input and returns a string that states the person'
 // s name and year they were born in a sentence
 
-
+const userAge = document.getElementById("input_age");
+const userName = document.getElementById("input_name");
+const results = document.getElementById("result");
+const classContainer = document.querySelector("#maincontainer");
 
 function getBirthYear() {
-    const userAge = document.getElementById("input_age").value;
     const date = new Date();
     const currentYear = date.getFullYear();
-    return (currentYear - userAge);
+    return currentYear - userAge.value;
 }
 
-function userData() {
-    const name = document.getElementById("input_name").value;
-
+function getUserInfo() {
+    results.innerHTML = "";
+    classContainer.className = "container";
     if (getBirthYear() > 2010) {
-        document.querySelector(".container").className = "kid";
-        document.getElementById("result").innerHTML = `Hi ${name}, you were born in ${getBirthYear()}`;
+        classContainer.className = "kid";
+        results.innerHTML = `Hi ${
+        userName.value
+    }, you were born in ${getBirthYear()}`;
     } else if (getBirthYear() > 2002) {
-        document.querySelector(".container").className = "teenager";
-        document.getElementById("result").innerHTML = `Hi ${name}, you were born in ${getBirthYear()}`;
+        classContainer.className = "teenager";
+        results.innerHTML = `Hi ${
+        userName.value
+    }, you were born in ${getBirthYear()}`;
     } else {
-        document.querySelector(".container").className = "adult";
-        document.getElementById("result").innerHTML = `Hi ${name}, you were born in ${getBirthYear()}`;
+        classContainer.className = "adult";
+        results.innerHTML = `Hi ${
+        userName.value
+    }, you were born in ${getBirthYear()}`;
     }
+    userAge.value = "";
+    userName.value = "";
 }
