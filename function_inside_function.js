@@ -18,5 +18,5 @@ function userData() {
     const name = document.getElementById("input_name").value;
 
     document.getElementById("result").innerHTML = `${name} was born in ${getBirthYear()}`;
-    frm.reset(); // Reset
+
 }
