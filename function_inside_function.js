@@ -18,15 +18,5 @@ function userData() {
     const name = document.getElementById("input_name").value;
 
     document.getElementById("result").innerHTML = `${name} was born in ${getBirthYear()}`;
-
-    console.log(`${name} was born in ${getBirthYear()}`);
-
-    console.log(name);
+    frm.reset(); // Reset
 }
-
-
-// var customerName = prompt("Please enter your name")
-
-// function findingBirthYear() {
-
-// }
