@@ -6,10 +6,9 @@
 
 
 
-
 function getBirthYear() {
     const userAge = document.getElementById("input_age").value;
-    const date = new Date()
+    const date = new Date();
     const currentYear = date.getFullYear();
     return (currentYear - userAge);
 }
@@ -17,6 +16,14 @@ function getBirthYear() {
 function userData() {
     const name = document.getElementById("input_name").value;
 
-    document.getElementById("result").innerHTML = `${name} was born in ${getBirthYear()}`;
-
+    if (getBirthYear() > 2010) {
+        document.querySelector(".container").className = "kid";
+        document.getElementById("result").innerHTML = `Hi ${name}, you were born in ${getBirthYear()}`;
+    } else if (getBirthYear() > 2002) {
+        document.querySelector(".container").className = "teenager";
+        document.getElementById("result").innerHTML = `Hi ${name}, you were born in ${getBirthYear()}`;
+    } else {
+        document.querySelector(".container").className = "adult";
+        document.getElementById("result").innerHTML = `Hi ${name}, you were born in ${getBirthYear()}`;
+    }
 }
