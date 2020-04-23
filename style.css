@@ -19,6 +19,25 @@
                 color: azure;
             }
             
+            .form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: max-content;
+            }
+            
+            .show_result {
+                margin-top: 20px;
+                color: white;
+                font-size: 3rem;
+            }
+            
+            .world_cup {
+                margin-top: 20px;
+                color: orangered;
+                font-size: 3rem;
+            }
+            
             .kid {
                 width: 100%;
                 height: 100%;
@@ -56,17 +75,4 @@
                 background-size: cover;
                 background-position: center bottom;
                 color: #F47213;
-            }
-            
-            .form {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: max-content;
-            }
-            
-            .show_result {
-                margin-top: 20px;
-                color: black;
-                font-size: 3rem;
             }
